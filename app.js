@@ -7,6 +7,10 @@ const app = express();
 
 // importamos aqui las rutas:
 const authRoutes = require("./router/auth");
+const userRoutes = require("./router/user");
+const menuRoutes = require("./router/menu");
+const especialidadRoutes = require("./router/especialidad");
+const postRoutes = require("./router/post");
 // ...
 
 
@@ -27,7 +31,12 @@ app.use(cors());
 
 
 // configuramos aqui las rutas:
-app.use(`/api/${API_VERSION}`,authRoutes);
+app.use(`/api/${API_VERSION}`, authRoutes);
+app.use(`/api/${API_VERSION}`, userRoutes);
+app.use(`/api/${API_VERSION}`, menuRoutes);
+app.use(`/api/${API_VERSION}`, especialidadRoutes);
+app.use(`/api/${API_VERSION}`, postRoutes);
+
 // ...
 
 module.exports = app;
