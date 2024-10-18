@@ -11,6 +11,9 @@ const userRoutes = require("./router/user");
 const menuRoutes = require("./router/menu");
 const especialidadRoutes = require("./router/especialidad");
 const postRoutes = require("./router/post");
+const newsletterRoutes = require("./router/newsletter");
+
+
 // ...
 
 
@@ -36,6 +39,7 @@ app.use(`/api/${API_VERSION}`, userRoutes);
 app.use(`/api/${API_VERSION}`, menuRoutes);
 app.use(`/api/${API_VERSION}`, especialidadRoutes);
 app.use(`/api/${API_VERSION}`, postRoutes);
+app.use(`/api/${API_VERSION}`, newsletterRoutes);
 
 // ...
 
